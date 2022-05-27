@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #000;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 360px;
+  overflow-x: hidden;
+  backgound-color: #000;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.radial-1 {
+  background: rgba(79, 0, 122, 0.8);
+  background: radial-gradient(
+    circle,
+    rgba(79, 0, 122, 0.8) 0%,
+    rgba(43, 44, 57, 0.1) 80%
+  );
+}
+
+.pBox {
+  @apply px-4 lg:px-16 sm:px-10;
+}
+
+.a-1 {
+  animation: autoAnimated 10s linear 0s infinite both;
+  animation-iteration-count: infinite;
+}
+
+.pattern {
+  background-color: #2b2c39;
+  background-image: url("https://media-private.canva.com/MADAfM9dRUg/1/screen_2x.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20220514%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220514T103029Z&X-Amz-Expires=15635&X-Amz-Signature=313f0a4f8a476576a43b9869fa14de9a8daad726623394dc3c17cd6e58d646a4&X-Amz-SignedHeaders=host&response-expires=Sat%2C%2014%20May%202022%2014%3A51%3A04%20GMT");
+}
+
+@keyframes autoAnimated {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  20% {
+    -webkit-transform: translateX(15px) translateY(0);
+    transform: translateX(15px) translateY(0);
+  }
+  40% {
+    -webkit-transform: translateX(15px) translateY(15px);
+    transform: translateX(15px) translateY(15px);
+  }
+  60% {
+    -webkit-transform: translateX(0) translateY(15px);
+    transform: translateX(0) translateY(15px);
+  }
+  80% {
+    -webkit-transform: translateX(-15px) translateY(0);
+    transform: translateX(-15px) translateY(0);
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.fixedLayout {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pers {
+  transform: perspective(600px) rotateY(20deg);
+}
+
+.m-pers {
+  transform: perspective(500px) rotateY(-20deg);
+}
+.nftcol{
+background-image: url(https://media-private.canva.com/4fXSw/MAEP134fXSw/1/s2.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20220513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220513T182703Z&X-Amz-Expires=74141&X-Amz-Signature=718728a640cbe76f00aa107302cd1acda51dc81e6d000ff0af6c7eb7b49385ba&X-Amz-SignedHeaders=host&response-expires=Sat%2C%2014%20May%202022%2015%3A02%3A44%20GMT);
+background-repeat: no-repeat;
+background-size: cover;
+}
